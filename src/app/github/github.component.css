@@ -7,3 +7,9 @@
   align-content: center;
   height: 350px;
 }
+#users {
+  background-color: rgb(163, 116, 53);
+  color: white;
+  width: 22%;
+  text-align: left;
+}
