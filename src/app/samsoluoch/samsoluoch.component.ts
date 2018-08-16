@@ -9,9 +9,9 @@ import {Samsoluoch} from '../github';
 })
 export class SamsoluochComponent implements OnInit {
 
-  Samsoluoch = [
+  Samsoluochs = [
     new Samsoluoch (1, 'Sam Oluoch', 'Anitas Kitchen'),
-    new Samsoluoch (2, 'Sam', 'Quotes'),
+    new Samsoluoch (2, 'Sam Oluoch', 'Quotes'),
   ];
 
   constructor() { }
