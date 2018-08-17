@@ -1,25 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import {Samsoluoch} from '../github';
+import {Users} from '../users';
+import {HttpClient} from '@angular/common/http';
 
 
 @Component({
   selector: 'app-samsoluoch',
   templateUrl: './samsoluoch.component.html',
+  providers: [HttpClient],
   styleUrls: ['./samsoluoch.component.css']
 })
 export class SamsoluochComponent implements OnInit {
+  samsoluoch: Users;
 
-  Samsoluochs = [
-    new Samsoluoch (1, 'Sam Oluoch', 'Anitas Kitchen'),
-    new Samsoluoch (2, 'Sam Oluoch', 'Quotes'),
-    new Samsoluoch (3, 'Sam Oluoch', 'Ping-Pong'),
-    new Samsoluoch (4, 'Sam Oluoch', 'Pig Dice'),
-    new Samsoluoch (5, 'Sam Oluoch', 'Rating Restaurant'),
-  ];
-
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+    interface ApiResponse {
+      avatar_url;
+      login;
+    }
+    this.http.get<ApiResponse>("https://api.github.com/users/samsoluoch?access_token=698c4dedb5ca335cf05a7b84facdf3e811e45237").subscribe(information =>{
+    console.log(information);
+        this.samsoluoch = new Users(information.avatar_url, information.login);
   }
 
+}
 }
