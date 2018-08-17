@@ -1,9 +1,10 @@
-import {Repository} from '../repository';
-import {Github} from '../github';
+// import {Repository} from '../repository';
+// import {Github} from '../github';
+import { Users } from './users';
 
-export const Repositories: Repository[] = [
-  new Repository (1, 'samsoluoch', 'Anita Kitchen'),
-  new Repository (2, 'samsoluoch', 'Ping-Pong'),
-  new Repository (3, 'samsoluoch', 'Pig-Dice'),
-  new Repository (4, 'samsoluoch', 'Rating Kitchen'),
+export const User: Users [] = [
+  new Users ('samsoluoch', 'Anita Kitchen'),
+  new Users ('samsoluoch', 'Ping-Pong'),
+  new Users ('samsoluoch', 'Pig-Dice'),
+  new Users ('samsoluoch', 'Rating Kitchen'),
 ];
