@@ -16,9 +16,6 @@ export class UsersComponent implements OnInit {
     new Users (5, 'samsoluoch'),
   ];
 
-  toggleDetails(index) {
-    this.Users[index].showDetails = !this.Users[index].showDetails;
-  }
 
   constructor() { }
 
