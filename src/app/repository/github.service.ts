@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
+import {Repositories} from '../repository';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class GithubService {
+  getRepositories() {
+    return Repositories;
+  }
 
   constructor() { }
 }
