@@ -1,3 +1,6 @@
 export class Users {
-  constructor (public id: number, public username: string) {}
+  public showDetails: boolean;
+  constructor (public id: number, public username: string) {
+    this.showDetails = false;
+  }
 }
