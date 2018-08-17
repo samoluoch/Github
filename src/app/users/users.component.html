@@ -5,6 +5,7 @@
         <h4>Some GitHub Usernames</h4>
         <ul>
         <li *ngFor='let Users of User' id="hubname">{{Users.username}}</li>
+        <button (click)='toggleDetails(i)'>Show Users</button>
         </ul>
       </div>
     </div>

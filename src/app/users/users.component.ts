@@ -8,13 +8,17 @@ import {Users} from '../users';
 })
 export class UsersComponent implements OnInit {
 
-  User = [
+  Users = [
     new Users (1, 'samsoluoch'),
     new Users (2, 'samsoluoch'),
     new Users (3, 'samsoluoch'),
     new Users (4, 'samsoluoch'),
     new Users (5, 'samsoluoch'),
   ];
+
+  toggleDetails(index) {
+    this.Users[index].showDetails = !this.Users[index].showDetails;
+  }
 
   constructor() { }
 
