@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Repository} from '../repository';
 import {HttpClient} from '@angular/common/http';
+import { Users } from '../users';
 
 @Component({
   selector: 'app-users',
@@ -11,6 +12,7 @@ import {HttpClient} from '@angular/common/http';
 export class UsersComponent implements OnInit {
 
   gituser: Repository;
+  samsoluoch: Users;
 
 
   constructor(private http: HttpClient) { }
