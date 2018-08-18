@@ -2,11 +2,11 @@
   <div class="jumbotron" id="gitProfiles">
     <div class="row">
       <div class="col-md-12">
-        <h4>Some GitHub Usernames</h4>
-        <ul>
-        <li *ngFor='let Users of User' id="hubname">{{Users.username}}</li>
-        <button (click)='toggleDetails(i)'>Show Users</button>
-        </ul>
+        <h4>GitHub Search Results</h4>
+        <img src="{{samsoluoch.profile}}" alt="">
+        <footer><cite>GitHub Username: {{gituser.login}}</cite></footer>
+        <footer><cite>Public Repositories: {{gituser.public_repos}}</cite></footer>
+        <footer><cite>Link to Profile: {{gituser.html_url}}</cite></footer>
       </div>
     </div>
   </div>
