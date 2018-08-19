@@ -7,6 +7,7 @@ import { GithubFormComponent } from './github-form/github-form.component';
 import { SamsoluochComponent } from './samsoluoch/samsoluoch.component';
 import { UsersComponent } from './users/users.component';
 import {HttpClientModule} from '@angular/common/http';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import {HttpClientModule} from '@angular/common/http';
     GithubComponent,
     GithubFormComponent,
     SamsoluochComponent,
-    UsersComponent
+    UsersComponent,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,
