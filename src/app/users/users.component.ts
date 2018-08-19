@@ -23,10 +23,11 @@ export class UsersComponent implements OnInit {
       login;
       public_repos;
       html_url;
+      updated_at;
   }
   this.http.get<ApiResponse>("https://api.github.com/users/samsoluoch?access_token=698c4dedb5ca335cf05a7b84facdf3e811e45237").subscribe(information =>{
     console.log(information);
-        this.gituser = new Repository(information.avatar_url, information.login, information.public_repos, information.html_url);
+        this.gituser = new Repository(information.avatar_url, information.login, information.public_repos, information.html_url, information.updated_at);
       });
 
     }
