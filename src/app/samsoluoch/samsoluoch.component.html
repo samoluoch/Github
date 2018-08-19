@@ -4,7 +4,11 @@
       <div class="col-md-12">
         <h2>Sam Oluoch</h2>
         <h3><strong>GitHub Profile</strong></h3>
-        <h4><footer><cite><strong>Profile Last Updated On:</strong> {{samsoluoch.updated_at|date}}</cite></footer></h4>
+        <div>
+          <ul>
+            <li appStrikethrough>Profile Last Updated On:<strong> {{samsoluoch.updated_at|date}}</strong></li>
+          </ul>
+        </div>
         <img src="{{samsoluoch.profile}}" alt="">
         <h4><footer><cite><strong>GitHub Username:</strong> {{samsoluoch.login}}</cite></footer></h4>
         <h4><footer><cite><strong>Public Repositories:</strong> {{samsoluoch.public_repos}}</cite></footer></h4>

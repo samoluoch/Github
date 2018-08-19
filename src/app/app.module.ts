@@ -8,6 +8,16 @@ import { SamsoluochComponent } from './samsoluoch/samsoluoch.component';
 import { UsersComponent } from './users/users.component';
 import {HttpClientModule} from '@angular/common/http';
 import { DateCountPipe } from './date-count.pipe';
+import { StrikethroughDirective } from './strikethrough.directive';
+import {RouterModule, Routes} from '@angular/router';
+
+const routes: Routes = [
+  {path: 'github', component: GithubComponent},
+  {path: 'samsoluoch', component: SamsoluochComponent},
+  {path: 'github-form', component: GithubFormComponent},
+  {path: 'users' , component: UsersComponent}
+];
+
 
 @NgModule({
   declarations: [
@@ -16,11 +26,13 @@ import { DateCountPipe } from './date-count.pipe';
     GithubFormComponent,
     SamsoluochComponent,
     UsersComponent,
-    DateCountPipe
+    DateCountPipe,
+    StrikethroughDirective
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
