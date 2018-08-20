@@ -10,6 +10,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { DateCountPipe } from './date-count.pipe';
 import { StrikethroughDirective } from './strikethrough.directive';
 import {RouterModule, Routes} from '@angular/router';
+import { GithubService } from './repository/github.service';
 
 const routes: Routes = [
   {path: 'github', component: GithubComponent},
@@ -34,7 +35,7 @@ const routes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [GithubService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
